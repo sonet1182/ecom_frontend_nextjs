@@ -37,7 +37,7 @@ const ImageSection: React.FC<Props> = ({ imgArray, product }) => {
                     ? "border-2 border-slate-300/60 shadow-md bg-palette-card/60"
                     : ""
                 }`}
-                onClick={() => onClickHandler(index)}
+                onMouseEnter={() => onClickHandler(index)}
               >
                 <Image
                   src={urlFor(imgItem).url()}

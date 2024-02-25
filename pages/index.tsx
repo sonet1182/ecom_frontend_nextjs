@@ -25,6 +25,8 @@ const Home: NextPage<{ products: IProduct[] }> = ({ products }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+
+    console.log('useEffect data', products)
     //add products to offers list
     const offersProducts = products.filter((item) => item.discount);
     dispatch(specialOfferProductsActions.addProducts(offersProducts));
