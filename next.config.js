@@ -8,11 +8,10 @@ const nextConfig = {
     localeDetection: false,
   },
   images: {
-    domains: ["cdn.sanity.io"],
+    domains: ["cdn.sanity.io", "localhost", "localhost:8000"],
   },
   env: {
     domain: "http://localhost:8000/",
-    // domain: "https://backend.tutorsheba.com/",
   },
   webpack: function (config) {
     config.module.rules.push({

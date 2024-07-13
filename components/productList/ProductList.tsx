@@ -9,6 +9,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { SortedProductsListActions } from "../../store/sortedProductList-slice";
 import { useRouter } from "next/router";
 import { IProductListRootState } from "../../lib/types/productList";
+import Link from "next/link";
+import StarRatingComponent from "react-star-rating-component";
+import ProductPrice from "../UI/ProductPrice";
 
 interface Props {
   productList: IProduct[];
@@ -43,6 +46,11 @@ const ProductList: React.FC<Props> = ({ productList }) => {
     <div>
       <Breadcrumb />
       <SubmenuCategory />
+
+
+
+
+
       <div className="w-full xl:max-w-[2100px] mx-auto">
         {isInNewestProductsPage && productList.length ? (
           <div className="grid gap-4 md:gap-2 grid-cols-6 md:grid-cols-12">
